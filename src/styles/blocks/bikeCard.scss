@@ -1,0 +1,48 @@
+.bike-card {
+
+  transition: box-shadow 0.3s, transform 0.3s, padding 0.3s;
+
+  &:hover {
+    box-shadow: 1px 2px 13px 6px #fff;
+    transform: scale(1.1);
+    padding: 5px;
+  }
+
+  &:not(:first-child) {
+    padding-top: 40px;
+
+    @include onTablet {
+      padding-top: 48px;
+    }
+  }
+
+  &__photo {
+    margin-bottom: 32px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+
+    @extend %font-poppins-bold;
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  &__description {
+    margin-bottom: 16px;
+
+    @extend %font-poppins-regular;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__price {
+    @extend %font-poppins-bold;
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
